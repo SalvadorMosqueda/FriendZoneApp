@@ -1,1 +1,1 @@
-export *from "./AuthNavigation.jsx"
+export * from "./AuthNavigation.jsx"
