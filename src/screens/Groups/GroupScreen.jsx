@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export  function CroupsScreen() {
+export  function GroupScreen() {
   return (
     <View>
-      <Text>CroupsScreen</Text>
+      <Text>CroupScreen</Text>
     </View>
   )
 }
