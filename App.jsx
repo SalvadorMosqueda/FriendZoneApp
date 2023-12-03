@@ -1,13 +1,15 @@
 import React from "react";
-import { NativeBaseProvider, Box } from "native-base";
+import { NativeBaseProvider } from "native-base";
 import { NavigationContainer } from '@react-navigation/native';
-import { Text } from "react-native";
+import { HandlerNavigation } from "./src/navigations";
+
+
 
 export default function App() {
   return (
     <NavigationContainer>
       <NativeBaseProvider>
-        <Text> Hello programers</Text>
+      <HandlerNavigation/>
       </NativeBaseProvider>
     </NavigationContainer>
   );
