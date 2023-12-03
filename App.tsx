@@ -7,7 +7,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <NativeBaseProvider>
-        <Text> Hello world</Text>
+        <Text> Hello programers</Text>
       </NativeBaseProvider>
     </NavigationContainer>
   );
