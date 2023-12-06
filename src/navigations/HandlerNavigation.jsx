@@ -4,7 +4,7 @@ import { AuthNavigation } from './stacks/index.js'
 import { AppNavigation } from './AppNavigation.jsx'
 
 export function HandlerNavigation() {
-    const user = { name: "John Doe"};
+    const user = null;
     return (
         user ? <AppNavigation /> : <AuthNavigation />)
 }

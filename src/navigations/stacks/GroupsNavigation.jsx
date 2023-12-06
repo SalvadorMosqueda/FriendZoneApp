@@ -11,7 +11,7 @@ export function GroupsNavigation() {
       <Stack.Screen
         name={screens.tab.groups.groupsScreen}
         component={GroupsScreen}
-        options={{ title: "Grupos" }}
+        options={{ title: "Grupos",  headerTitleAlign: 'center' }}
       />
       <Stack.Screen
         name={screens.tab.groups.createGroupScreen}

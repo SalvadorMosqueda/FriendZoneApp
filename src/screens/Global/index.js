@@ -1,3 +1,3 @@
 export * from "./CameraScreen.jsx"
-export * from "./UserProfileScreen.jsx"
+export * from "./ImageFullScreen.jsx"
 export * from "./UserProfileScreen.jsx"

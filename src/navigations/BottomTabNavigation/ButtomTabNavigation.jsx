@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "native-base";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
+// import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {
   ChatsNavigation,
@@ -27,7 +27,7 @@ export function BottomTabNavigation() {
       <Tab.Screen
         name={screens.tab.chats.root}
         component={ChatsNavigation}
-        options={{ title: "Chats" }}
+        options={{ title: "Chats", }}
       />
       <Tab.Screen
         name={screens.tab.groups.root}
@@ -47,7 +47,7 @@ function screenIcon(route, color, size) {
   let iconName;
 
   if (route.name === screens.tab.chats.root) {
-    iconName = "chat";
+    iconName = "wechat";
   }
   if (route.name === screens.tab.groups.root) {
     iconName = "account-group";

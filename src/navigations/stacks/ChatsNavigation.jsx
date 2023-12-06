@@ -17,7 +17,7 @@ export  function ChatsNavigation() {
           <Stack.Screen
             name={screens.tab.chats.chatsScreen}
             component={ChatsScreen}
-            options={{ title: "Chats" }}
+            options={{ title: "Chats",  headerTitleAlign: 'center' }}
           />
           <Stack.Screen
             name={screens.tab.chats.createChatScreen}
