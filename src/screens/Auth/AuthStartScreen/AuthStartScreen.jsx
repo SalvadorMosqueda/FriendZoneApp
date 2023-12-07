@@ -6,6 +6,9 @@ import { styles } from './AuthStartScreen.styles'
 
 
 export function AuthStartScreen() {
+const navigation = useNavigation()
+
+const goToLogin = () => navigation.navigate(screens.auth.loginScreen)
 
   return (
     <View style={styles.content}>
@@ -16,7 +19,7 @@ export function AuthStartScreen() {
       <Text style={styles.descripcion}>Consultar nuestra politica de privacidad.
       Pulsa "Continuar" para aceptar los terminos y condiciones.
       </Text>
-      <Text style={styles.btn}><Text style={{color:'#fff',fontSize:18}}>Aceptar y Continuar</Text></Text>
+      <Text onPress={goToLogin} style={styles.btn}><Text style={{color:'#fff',fontSize:18}}>Aceptar y Continuar</Text></Text>
     </View>
   )
 }
