@@ -26,12 +26,12 @@ export function AuthNavigation() {
       <Stack.Screen
         name={screens.auth.loginScreen}
         component={LoginScreen}
-        options={{ title: "Iniciar sesión" }}
+        options={{ title: "Iniciar sesión", headerTitleAlign: 'center' }}
       />
       <Stack.Screen
         name={screens.auth.registerScreen}
         component={RegisterScreen}
-        options={{ title: "Registro" }}
+        options={{ title: "Registro" ,headerTitleAlign: 'center' }}
       />
     </Stack.Navigator>
   );
