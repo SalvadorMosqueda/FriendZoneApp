@@ -7,11 +7,11 @@ export const styles = new StyleSheet.create({
 
     },
     input:{
-        backgroundColor:'#202020',
-        color:'#fff',
-        fontSize:18,
-        borderRadius:10,
-        marginVertical:5,
+        backgroundColor: "#202020",
+        color: "#fff",
+        fontSize: 18,
+        borderWidth: 0,
+        marginVertical: 5,
     },
     btn:{
         backgroundColor: '#0891b2',
@@ -22,4 +22,8 @@ export const styles = new StyleSheet.create({
         textAlign: 'center',
         marginTop:20
     },
+    inputError: {
+        backgroundColor: "#270C0D",
+      },
+   
 })

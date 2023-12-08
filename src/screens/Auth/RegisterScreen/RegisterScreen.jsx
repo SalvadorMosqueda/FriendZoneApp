@@ -10,11 +10,10 @@ export  function RegisterScreen() {
       <Text style={styles.title}>Crear tu cuenta y empieza a buscar amigos!</Text>
     
       <RegisterForm/>
-    
+
       <Text style={styles.register} onPress={navigation.goBack}>
         Iniciar sesión
       </Text>
-    
     </View>
   )
 }

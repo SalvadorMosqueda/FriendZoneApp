@@ -22,4 +22,5 @@ export const styles = new StyleSheet.create({
       opacity: 0.6,
       textAlign: "center",
     },
+
 })

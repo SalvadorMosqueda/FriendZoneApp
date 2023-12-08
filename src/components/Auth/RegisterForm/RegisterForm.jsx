@@ -1,21 +1,35 @@
 import { View, Text } from 'react-native'
-import {Input,Button} from 'native-base'
-import {styles} from './RegisterForm.styles'
+import { Input, Button } from 'native-base'
+import { styles } from './RegisterForm.styles'
 import { useNavigation } from '@react-navigation/native'
+import { useFormik } from 'formik'
+import { initialValues, validationSchema } from './RegisterForm.form'
 
 
-export  function RegisterForm() {
+export function RegisterForm() {
+
+  const formik = useFormik({
+    initialValues: initialValues(),
+    validationSchema,
+    validationOnChange: false,
+    onSubmit: async (formValue) => {
+      console.log(formValue)
+    }
+  })
+
+
   return (
     <View>
       <View style={styles.viewInput}>
-      
       <Input
-        placeholder='Correo electrónico'
-        style={styles.input}
-        variant={"unstyled"}
-        autoCapitalize={false}
-      />
-      
+          placeholder="Correo electronico"
+          variant="unstyled"
+          autoCapitalize={'none'}
+          underline={false}
+          value={formik.values.email}
+          onChangeText={(text) => formik.setFieldValue("email", text)}
+          style={[styles.input, formik.errors.email && styles.inputError]}
+        />
       </View>
       <Input
         placeholder="Contraseña"
@@ -27,8 +41,8 @@ export  function RegisterForm() {
       />
       <Button
         style={styles.btn}
-        // onPress={formik.handleSubmit}
-        // isLoading={formik.isSubmitting}
+        onPress={formik.handleSubmit}
+        isLoading={formik.isSubmitting}
       >
         CREAR CUENTA
       </Button>
