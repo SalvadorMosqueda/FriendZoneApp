@@ -12,6 +12,7 @@ export const styles = new StyleSheet.create({
         fontSize: 18,
         borderWidth: 0,
         marginVertical: 5,
+        
     },
     btn:{
         backgroundColor: '#0891b2',
