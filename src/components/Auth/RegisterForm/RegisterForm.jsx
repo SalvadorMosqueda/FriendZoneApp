@@ -53,7 +53,7 @@ export function RegisterForm() {
           placeholder="Correo electronico"
           variant="unstyled"
           autoCapitalize={'none'}
-
+    
           autoCorrect={false}
           value={formik.values.email}
           onChangeText={(text) => formik.setFieldValue("email", text)}
