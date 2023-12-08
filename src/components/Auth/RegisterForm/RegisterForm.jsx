@@ -1,59 +1,54 @@
-import { View, TextInput } from 'react-native'
+import { View } from 'react-native'
 import { Input, Button } from 'native-base'
 import { styles } from './RegisterForm.styles'
 import { useNavigation } from '@react-navigation/native'
 import { useFormik } from 'formik'
+import Toast from 'react-native-toast-message';
 import { Auth } from "../../../api"
-
-import {
-  QueryClient,
-  QueryClientProvider,
-  useMutation,
-  useQuery,
-  
-} from '@tanstack/react-query'
-
+import {QueryClient,useMutation,useQuery,} from '@tanstack/react-query'
 import { initialValues, validationSchema } from './RegisterForm.form'
-
 
 export function RegisterForm() {
 
-
   authController = new Auth()
+ const  navigation = useNavigation()
 
-
-
-
-
-
-  // const {mutate} = useMutation(authController.register, {
-  //   onSuccess: () => {
-  //     console.log("Success")
-  //   }
-  // })
-  
-  // const mutation = useMutation(authController.register, {
-  //   onSuccess: () => {
-  //     console.log('Mutation successful!');
-  //   },
-  //   onError: (error) => {
-  //     console.log('Mutation failed with error:', error);
-  //   },
-  // });
+  const mutation = useMutation({
+    mutationFn: authController.register,
+    onSuccess: () => {
+      Toast.show({
+        type: 'success',
+        position: 'top-right',
+        text1: 'Email registrado con exito  !',
+      });
+      navigation.goBack();
+    },
+    onError: (error) => {
+      Toast.show({
+        type: 'error',
+        position: 'top-right',
+        text1: 'Error Notification !',
+      });
+     
+    }
+  })
 
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: validationSchema(),
     validationOnChange: false,
-    onSubmit: async ({username,password}) => {
-     mutation.mutate({username,password});
+    onSubmit: async ({ email, password }) => {
+      mutation.mutate({ email, password });
     }
   })
 
 
   return (
+    
     <View>
+       
       <View style={styles.viewInput}>
+    
         <Input
           placeholder="Correo electronico"
           variant="unstyled"
@@ -86,6 +81,7 @@ export function RegisterForm() {
       >
         CREAR CUENTA
       </Button>
+      <Toast ref={(ref) => Toast.setRef(ref)} />
     </View>
   )
 }

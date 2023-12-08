@@ -23,8 +23,8 @@ export const styles = new StyleSheet.create({
         textAlign: 'center',
         marginTop:20
     },
-    // inputError: {
-    //     backgroundColor: "#270C0D",
-    //   },
+    inputError: {
+        backgroundColor: "#270C0D",
+      },
    
 })

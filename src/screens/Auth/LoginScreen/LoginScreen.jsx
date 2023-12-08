@@ -2,6 +2,7 @@ import { View, Text } from 'react-native'
 import { styles } from './LoginScreen.styles'
 import { screens } from '../../../utils'
 import React from 'react'
+import { LoginForm } from '../../../components/Auth/LoginForm'
 import { useNavigation } from '@react-navigation/native'
 
 export const LoginScreen = () => {
@@ -9,13 +10,13 @@ export const LoginScreen = () => {
 
     const goToRegister = () => {
         navigation.navigate(screens.auth.registerScreen);
-      };
+    };
 
     return (
         <View style={styles.content}>
             <Text style={styles.title}>Entra y empieza a encontrar amigos!</Text>
 
-            <Text style={{ color: '#fff' }}>Login Form</Text>
+            <LoginForm />
 
 
             <Text onPress={goToRegister} style={styles.register}  >
