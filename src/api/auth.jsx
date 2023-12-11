@@ -8,8 +8,9 @@ export class Auth {
         })
     }
     async login(dto){
+        
         return axios.post(`${ENV.API_URL}/${ENV.ENDPOINTS.AUTH.LOGIN}`, dto, {
-            headers: {"Content-Type":'apllication/json'}
+            headers: {"Content-Type":'application/json'}
         }
     )}
 }

@@ -3,7 +3,6 @@ import { Input, Button } from 'native-base'
 import { styles } from './RegisterForm.styles'
 import { useNavigation } from '@react-navigation/native'
 import { useFormik } from 'formik'
-import Toast from 'react-native-toast-message';
 import { Auth } from "../../../api"
 import {QueryClient,useMutation,useQuery,} from '@tanstack/react-query'
 import { initialValues, validationSchema } from './RegisterForm.form'
@@ -16,19 +15,11 @@ export function RegisterForm() {
   const mutation = useMutation({
     mutationFn: authController.register,
     onSuccess: () => {
-      Toast.show({
-        type: 'success',
-        position: 'top-right',
-        text1: 'Email registrado con exito  !',
-      });
+      
       navigation.goBack();
     },
     onError: (error) => {
-      Toast.show({
-        type: 'error',
-        position: 'top-right',
-        text1: 'Error Notification !',
-      });
+    
      
     }
   })
@@ -81,7 +72,6 @@ export function RegisterForm() {
       >
         CREAR CUENTA
       </Button>
-      <Toast ref={(ref) => Toast.setRef(ref)} />
     </View>
   )
 }

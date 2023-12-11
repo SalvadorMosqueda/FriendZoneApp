@@ -1,9 +1,10 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import { styles } from './LoginScreen.styles'
 import { screens } from '../../../utils'
 import React from 'react'
 import { LoginForm } from '../../../components/Auth/LoginForm'
 import { useNavigation } from '@react-navigation/native'
+import { assets } from '../../../assests'
 
 export const LoginScreen = () => {
     const navigation = useNavigation()
@@ -14,6 +15,7 @@ export const LoginScreen = () => {
 
     return (
         <View style={styles.content}>
+            <Image style={styles.img} source={assets.image.jpg.logo} />
             <Text style={styles.title}>Entra y empieza a encontrar amigos!</Text>
 
             <LoginForm />
