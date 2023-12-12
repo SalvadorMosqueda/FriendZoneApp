@@ -14,21 +14,21 @@ export const LoginScreen = () => {
     };
 
     return (
-        <View style={styles.content}>
+        <View style={{ backgroundColor: '#454C59' }} >
             <Image style={styles.img} source={assets.image.jpg.logo} />
-            <Text style={styles.title}>Entra y empieza a encontrar amigos!</Text>
+            {/* <Text style={styles.title}>Entra y empieza a encontrar amigos!</Text> */}
 
-            <LoginForm />
+            <View style={styles.contentForm}>
+                <LoginForm />
+                <Text oPress={goToRegister} style={styles.register}  >
+                    Registrarse
+                </Text>
 
-
-            <Text onPress={goToRegister} style={styles.register}  >
-                Registrarse
-            </Text>
-
-            <Text style={styles.info}>
-                Debes de tener al menos 16 años de edad para registrarte. Más
-                información sobre cómo trabaja FriendZone en las politicas.
-            </Text>
+                <Text style={styles.info}>
+                    Debes de tener al menos 16 años de edad para registrarte. Más
+                    información sobre cómo trabaja FriendZone en las politicas.
+                </Text>
+            </View>
         </View>
     )
 }

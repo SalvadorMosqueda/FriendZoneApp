@@ -1,29 +1,36 @@
 import { StyleSheet } from "react-native";
 
 export const styles = new StyleSheet.create({
-    content: {
-      marginHorizontal: 20,
+    contentForm: {
+  
+      display: "flex",
+      padding:25,
+      backgroundColor: "#fff",
+      height: 700,
+      borderTopRightRadius:40
+        ,borderTopLeftRadius:40,
+       
+
     },
     title: {
       color: "#fff",
-      marginVertical: 15,
+      marginVertical: 1,
       opacity: 0.6,
     },
     img:{
       width: '100%',
-      height: 500, 
-      resizeMode: 'contain',
-      marginVertical: 5
+      height: 310,
+
+      
   },
     register: {
       color: "#0891b2",
       textAlign: "center",
       fontSize: 18,
-      marginVertical: 30,
+      marginVertical: 20,
     },
     info: {
-      color: "#fff",
-      marginVertical: 15,
+      color: "black",
       opacity: 0.6,
       textAlign: "center",
     },

@@ -6,10 +6,12 @@ export const styles = new StyleSheet.create({
       backgroundColor: "#002",
     },
     headerStyle: {
-      backgroundColor: "#000",
+      backgroundColor: "#F2D6A2",
     },
     headerTitleStyle: {
-      color: "#fff",
+      color: "#B7916A",
+      fontWeight: "bold",
+      
     },
   },
   modalStyles: {
