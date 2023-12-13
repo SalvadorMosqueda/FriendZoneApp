@@ -27,6 +27,7 @@ export const styles = new StyleSheet.create({
       color: "#0891b2",
       textAlign: "center",
       fontSize: 18,
+      zIndex: 4,
       marginVertical: 20,
     },
     info: {

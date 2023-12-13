@@ -22,8 +22,8 @@ export function AuthProvider(props) {
   const login = async (accessToken) => {
     try {
       setLoading(true);
-      const response = await userController.getMe(accessToken);
-      setUser(response);
+      // const response = await userController.getMe(accessToken);
+      setUser('juan');
       setToken(accessToken);
       setLoading(false);
     } catch (error) {

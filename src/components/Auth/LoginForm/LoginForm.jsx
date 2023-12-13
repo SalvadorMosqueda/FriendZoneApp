@@ -1,16 +1,22 @@
 import { View, Text, Image } from 'react-native';
 import { Input, Button,Icon, Alert } from 'native-base'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
 import { styles } from './LoginForm.styles'
 import { initialValues, validationSchema } from './LoginForm.form';
 import { useFormik } from 'formik';
 import { Auth } from '../../../api';
+import {userAuth} from '../../../hooks'
 import { assets } from '../../../assests';
 import { QueryClient, useMutation, useQuery, } from '@tanstack/react-query'
 
+
+
+
+
 export function LoginForm() {
     authController = new Auth()
+    const {login} = userAuth()
+
 
     const formik = useFormik({
         initialValues: initialValues(),
@@ -26,6 +32,7 @@ export function LoginForm() {
         mutationFn: authController.login,
         onSuccess: (response) => {
             console.log('exito', response.data)
+            login(response.data.access_token    )
         },
         onError: (error) => {
             console.log("error", error.response.data)

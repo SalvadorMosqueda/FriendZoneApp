@@ -1,8 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Icon } from "native-base";
+import { Icon as IconBase } from "native-base";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-// import Icon from 'react-native-vector-icons/FontAwesome';
 
+import  {Icon as AntDesign } from 'react-native-vector-icons/AntDesign';
+
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import {
   ChatsNavigation,
   GroupsNavigation,
@@ -24,10 +26,16 @@ export function BottomTabNavigation() {
         tabBarIcon: ({ color, size }) => screenIcon(route, color, size),
       })}
     >
+
       <Tab.Screen
         name={screens.tab.chats.root}
         component={ChatsNavigation}
         options={{ title: "Chats", }}
+      />
+      <Tab.Screen
+        name={"perfil"}
+        component={ChatsNavigation}
+        options={{ title: "perfil", }}
       />
       <Tab.Screen
         name={screens.tab.groups.root}
@@ -45,20 +53,28 @@ export function BottomTabNavigation() {
 
 function screenIcon(route, color, size) {
   let iconName;
+  let as;
 
   if (route.name === screens.tab.chats.root) {
-    iconName = "wechat";
+    iconName = "chat";
+    as = MaterialCommunityIcons
+  }
+  if (route.name === 'perfil') {
+    iconName = "user";
+    as = AntDesign
   }
   if (route.name === screens.tab.groups.root) {
     iconName = "account-group";
+    as = MaterialCommunityIcons
   }
   if (route.name === screens.tab.settings.root) {
     iconName = "cog-outline";
+    as = MaterialCommunityIcons
   }
 
   return (
-    <Icon
-      as={MaterialCommunityIcons}
+    <IconBase
+      as={as}
       name={iconName}
       color={color}
       size={size}

@@ -20,7 +20,7 @@ export const LoginScreen = () => {
 
             <View style={styles.contentForm}>
                 <LoginForm />
-                <Text oPress={goToRegister} style={styles.register}  >
+                <Text onPress={goToRegister} style={styles.register}  >
                     Registrarse
                 </Text>
 
