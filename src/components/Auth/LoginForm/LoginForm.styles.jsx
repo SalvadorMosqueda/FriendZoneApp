@@ -3,13 +3,14 @@ import { StyleSheet } from "react-native";
 
 export const styles = new StyleSheet.create({
     viewInput:{
-       
+   
     },
     input:{
         // backgroundColor: "#812C11",
         color: "black",
         borderBottomWidth: 1,
         borderRadius: 20,
+        marginBottom: 10,
         borderColor: '#B7916A',
         fontSize: 18,
         // paddingLeft: 45,
@@ -21,6 +22,7 @@ export const styles = new StyleSheet.create({
         display:'flex',
         flexDirection: 'row',
         justifyContent:'center',
+        // marginVertical: 20,
         gap: 30,
         marginTop:5
     },
@@ -32,7 +34,7 @@ export const styles = new StyleSheet.create({
         padding: 10,
         marginBottom: 5,
         textAlign: 'center',
-        marginTop:15
+        marginTop:30
     },
     textBtn:{
         color: '#B7916A',
@@ -43,6 +45,7 @@ export const styles = new StyleSheet.create({
     textOR:{
         color: '#B7916A',
         fontSize: 18,
+        marginVertical: 15,
         fontWeight: '600',
         textAlign: 'center',},
     inputError: {

@@ -8,12 +8,15 @@ export const styles = new StyleSheet.create({
         width: '100%',
         height: height/2 +10*4,
         borderRadius: 30,
+        // justifyContent:'space-between',
         overflow: 'hidden',
+      },
+      contentImageBackground:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
       },
       imgPerfil: {
         width: '100%',
         height: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
       },
 })

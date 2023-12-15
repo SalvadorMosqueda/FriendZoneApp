@@ -24,10 +24,10 @@ export const LoginScreen = () => {
                     Registrarse
                 </Text>
 
-                <Text style={styles.info}>
+                {/* <Text style={styles.info}>
                     Debes de tener al menos 16 años de edad para registrarte. Más
                     información sobre cómo trabaja FriendZone en las politicas.
-                </Text>
+                </Text> */}
             </View>
         </View>
     )

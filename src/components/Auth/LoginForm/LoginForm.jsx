@@ -32,7 +32,7 @@ export function LoginForm() {
         mutationFn: authController.login,
         onSuccess: (response) => {
             console.log('exito', response.data)
-            login(response.data.access_token    )
+            login(response.data.access_token)
         },
         onError: (error) => {
             console.log("error", error.response.data)
