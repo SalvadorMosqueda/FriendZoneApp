@@ -8,11 +8,10 @@ export  function SearchScreen() {
   
     return (
     
-    <View>
-        <ImageBackground style={styles.imgPerfil} source={jpg.yo} >
-        <Text style={{color:'#fff'}}>SearchScreen</Text>
+        <View style={styles.imgPerfilContainer}>
+        <ImageBackground style={styles.imgPerfil} source={jpg.yo}>
+          <Text style={{color:'#fff'}}>SearchScreen</Text>
         </ImageBackground>
-    
-    </View>
+      </View>
   )
 }
