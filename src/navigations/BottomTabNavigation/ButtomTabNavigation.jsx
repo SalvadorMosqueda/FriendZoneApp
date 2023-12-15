@@ -1,17 +1,20 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Icon as IconBase } from "native-base";
+import { Icon } from "native-base";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import  {Icon as AntDesign } from 'react-native-vector-icons/AntDesign';
+import AntIcon from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome6Icons from 'react-native-vector-icons/FontAwesome6';
 
-// import Icon from 'react-native-vector-icons/FontAwesome';
 import {
   ChatsNavigation,
   GroupsNavigation,
   SettingsNavigation,
+  SearchNavigation
 } from "../stacks";
 import { screens } from "../../utils";
 import { styles } from "./BottomTabNavigation.styles";
+// import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,17 +29,24 @@ export function BottomTabNavigation() {
         tabBarIcon: ({ color, size }) => screenIcon(route, color, size),
       })}
     >
+      <Tab.Screen
+        name={"perfil"}
+        component={ChatsNavigation}
+        options={{ title: "perfil", }}
+      />
 
       <Tab.Screen
         name={screens.tab.chats.root}
         component={ChatsNavigation}
         options={{ title: "Chats", }}
       />
+
       <Tab.Screen
-        name={"perfil"}
-        component={ChatsNavigation}
-        options={{ title: "perfil", }}
+        name={screens.tab.search.root}
+        component={SearchNavigation}
+        options={{ title: "Search", }}
       />
+
       <Tab.Screen
         name={screens.tab.groups.root}
         component={GroupsNavigation}
@@ -56,13 +66,19 @@ function screenIcon(route, color, size) {
   let as;
 
   if (route.name === screens.tab.chats.root) {
-    iconName = "chat";
-    as = MaterialCommunityIcons
+    iconName = "chatbox-outline";
+    as = Ionicons
   }
+
   if (route.name === 'perfil') {
     iconName = "user";
-    as = AntDesign
+    as = AntIcon
   }
+  if (route.name === screens.tab.search.root) {
+    iconName = "person-through-window";
+    as = FontAwesome6Icons
+  }
+
   if (route.name === screens.tab.groups.root) {
     iconName = "account-group";
     as = MaterialCommunityIcons
@@ -73,7 +89,7 @@ function screenIcon(route, color, size) {
   }
 
   return (
-    <IconBase
+    <Icon
       as={as}
       name={iconName}
       color={color}

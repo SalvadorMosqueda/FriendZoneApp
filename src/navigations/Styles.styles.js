@@ -3,9 +3,11 @@ import { StyleSheet } from "react-native";
 export const styles = new StyleSheet.create({
   stackNavigationStyles: {
     contentStyle: {
-      backgroundColor: "#002",
+      // backgroundColor: "#002",
+      backgroundColor: "black",
     },
     headerStyle: {
+      // backgroundColor: "#F2D6A2",
       backgroundColor: "#F2D6A2",
     },
     headerTitleStyle: {

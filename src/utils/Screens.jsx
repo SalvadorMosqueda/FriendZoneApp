@@ -26,6 +26,12 @@ const auth = {
     groupsScreen: "GroupsScreen",
     createGroupScreen: "CreateGroupScreen",
   };
+
+
+  const search ={
+    root: "SearchRoot",
+    searchScreen: "SearchScreen",
+  }
   
   const settings = {
     root: "SettingsRoot",
@@ -42,5 +48,6 @@ const auth = {
       chats,
       groups,
       settings,
+      search
     },
   };
