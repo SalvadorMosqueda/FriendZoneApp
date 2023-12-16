@@ -8,39 +8,31 @@ import { styles } from './SearchScreen.styles.jsx'
 export function SearchScreen() {
 
 
-  return (
+    return (
+        <View >
+            <View style={styles.imgPerfilContainer}>
+                <ImageBackground style={styles.imgPerfil} source={jpg.yo}>
 
-    <View style={styles.imgPerfilContainer}>
-      <ImageBackground style={styles.imgPerfil} source={jpg.yo}>
+                  
+                    <View style={{ backgroundColor: '#0891b2',alignItems:'center' }} >
+                        <Text style={{ color: '#fff',fontSize:22  }}>Salvador mosqueda, 26 </Text>
+                        <Text style={{ color: '#fff', fontSize:22}}>Tijuana Bc </Text>
+                    </View>
+                </ImageBackground>
 
-        <View style={styles.contentImageBackground}>
-    
-            <TouchableOpacity style={{ backgroundColor: 'black'}}>
-              <Icon as={FontAwesome6} size={10} color={'#fff'} name='arrow-left' />
-            </TouchableOpacity>
+            </View>
 
-            <TouchableOpacity style={{ backgroundColor: 'black',}}>
-              <Icon as={FontAwesome6} size={10} color={'#fff'} name='heart' />
-            </TouchableOpacity>
-          
 
-          <View>
-            {/* <View style={{ backgroundColor: 'black' }}>
-              <View >
+            {/* <View style={styles.contentImageBackground}>
+                <TouchableOpacity style={{ backgroundColor: 'black' }}>
+                    <Icon as={FontAwesome6} size={10} color={'#fff'} name='arrow-left' />
+                </TouchableOpacity>
 
-                <Text style={{ color: '#fff' }}>Salvador mosqueda </Text>
-                <Text style={{ color: '#fff' }}>Tijuana Bc </Text>
-              </View>
+                <TouchableOpacity style={{ backgroundColor: 'black', }}>
+                    <Icon as={FontAwesome6} size={10} color={'#fff'} name='heart' />
+                </TouchableOpacity>
             </View> */}
 
-          </View>
-
         </View>
-
-
-
-
-      </ImageBackground>
-    </View>
-  )
+    )
 }
